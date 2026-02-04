@@ -1,4 +1,4 @@
-# [DEPRICATED] Home Assistant Community Add-on: Mopidy+
+# [DEPRECATED] Home Assistant Community Add-on: Mopidy+
 ![](logo.png)
 ### Features
 - Enables music-playback through [Mopidy](https://mopidy.com/)
