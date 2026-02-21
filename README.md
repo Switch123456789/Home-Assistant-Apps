@@ -10,7 +10,7 @@
 - **[Sendspin](Sendspin)** (Client)
 - **[CUPS](CUPS)**
 - [Mopidy](Mopidy)
-- [Snapclient (Snapcast)](Snapclient)
+- [Snapclient](Snapclient) (Snapcast)
 
 ## Help
 - **[Report a bug or request a feature here](https://github.com/Switch123456789/Home-Assistant-Apps/issues)**
