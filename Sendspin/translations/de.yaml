@@ -1,0 +1,11 @@
+configuration:
+  static_delay_ms:
+    name: "Zusätzliche Wiedergabeverzoegerung in Millisekunden nach der Synkronisierung"
+  name:
+    name: "Name für diesen Client"
+  id:
+    name: "Einzigartige ID für diesen Client"
+  url:
+    name: "WebSocket URL des Sendspin-Servers"
+  log_level:
+    name: "Logging level verwenden"

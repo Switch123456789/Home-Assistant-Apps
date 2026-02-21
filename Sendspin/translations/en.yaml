@@ -1,0 +1,11 @@
+configuration:
+  static_delay_ms:
+    name: "Extra playback delay in milliseconds applied after clock sync"
+  name:
+    name: "Friendly name for this client"
+  id:
+    name: "Unique identifier for this client"
+  url:
+    name: "WebSocket URL of the Sendspin server"
+  log_level:
+    name: "Logging level to use"
