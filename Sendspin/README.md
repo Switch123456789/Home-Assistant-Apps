@@ -1,4 +1,4 @@
-# Home Assistant App: Sendspin
+# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Sendspin](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Sendspin)
 ![](logo.png)
 
 ## Features
@@ -25,4 +25,3 @@
 ```
 - The settings in the configuration-tab will be applied to sendspin via commandline.
 - Sendspin will store those settings in it's configuraton-file, whenever it shuts down BUT ONLY if changes were applied at runtime (including volume-changes but excluding commandline-parameters), so keep that in mind.
-- **[Repo-page](https://github.com/Switch123456789/Home-Assistant-Apps)**

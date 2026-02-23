@@ -1,4 +1,5 @@
-# [DEPRECATED] Home Assistant App: Mopidy
+### **THIS APP IS DEPRECATED**
+# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Mopidy](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Mopidy)
 ![](logo.png)
 ## Features
 - Enables music-playback through [Mopidy](https://mopidy.com/)
@@ -50,7 +51,3 @@ You can also use [iris' webinterface](https://github.com/jaedb/Iris) to playback
 
 - **Navigate to `http://HOSTNAME:8000/mopidy` to use [Icecast](https://icecast.org)**  
 Some Browser's media-player can be janky with live-streaming, so I suggest to open the URL in [vlc](https://github.com/videolan/vlc) or whatever software you prefer.
-
-### More infos
-
-- [Repo add-on-page](https://github.com/Switch123456789/Switch-s-Home-Assistant-Add-ons)

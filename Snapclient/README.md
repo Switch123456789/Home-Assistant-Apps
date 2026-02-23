@@ -1,4 +1,5 @@
-### [DEPRECATED] Home Assistant App: Snapclient (Snapcast)
+### **THIS APP IS DEPRECATED**
+# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Snapclient](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Snapclient)
 ![](logo.png)
 
 ## Features
@@ -13,6 +14,3 @@
 ## Configuration
 - Navigate to the app's configuration-page for extra settings
 - The default URL is set to the local Snapserver (e.g. [Music Assistant](https://github.com/music-assistant/server)-, [Mopidy](https://github.com/Switch123456789/Home-Assistant-Apps?tab=readme-ov-file)- or [Snapserver](https://github.com/Art-Ev/addon-snapserver)-addons).
-
-## More infos
-- **[Repo-page](https://github.com/Switch123456789/Home-Assistant-Apps)**

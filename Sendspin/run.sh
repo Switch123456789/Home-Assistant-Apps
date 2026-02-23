@@ -2,7 +2,7 @@
 CFG_PATH="/root/.config/sendspin/settings-daemon.json"
 SENDSPIN_CMD="sendspin daemon --audio-device 0 --disable-mpris"
 function check_config {
-    declare -g VALUE=$(bashio::config "$2")
+    declare -g VALUE="$(bashio::config "$2")"
     if [ "${VALUE}" != null ]; then if [ "$1" = str ]
         then declare -g SENDSPIN_CMD+=" ${3} \"${VALUE}\""
         else declare -g SENDSPIN_CMD+=" ${3} ${VALUE}"

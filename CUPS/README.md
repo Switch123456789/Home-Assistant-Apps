@@ -1,4 +1,4 @@
-# Home Assistant App: CUPS
+# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [CUPS](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/CUPS)
 ![](logo.png)
 
 ## Features
@@ -20,4 +20,3 @@
 - Can announce but not discover printers using mDNS
 - Only stock and brother printers are preinstalled (Create an issue to request another package)
 - No Ingress (yet?)
-- **[Repo page](https://github.com/Switch123456789/Home-Assistant-Apps)**
