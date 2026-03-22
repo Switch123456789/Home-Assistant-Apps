@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 CFG_PATH="/root/.config/sendspin/settings-daemon.json"
-SENDSPIN_CMD="sendspin daemon --audio-device 0 --disable-mpris"
+SENDSPIN_CMD="sendspin daemon --audio-device 0 --hardware-volume false --disable-mpris"
 function check_config {
     declare -g VALUE="$(bashio::config "$2")"
     if [ "${VALUE}" != null ]; then if [ "$1" = str ]
