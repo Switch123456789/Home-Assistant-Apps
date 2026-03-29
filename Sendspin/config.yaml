@@ -1,7 +1,7 @@
 slug: "sendspin"
 name: "Sendspin"
 description: "Sendspin client for local playback"
-version: "0.10"
+version: "0.11"
 init: false
 audio: true
 realtime: true
@@ -16,7 +16,11 @@ arch:
 
 startup: services
 
+options:
+  boost_volume: true
+
 schema:
+  boost_volume: bool?
   static_delay_ms: int?
   name: str?
   id: str?

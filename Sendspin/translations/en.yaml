@@ -1,4 +1,6 @@
 configuration:
+  boost_volume:
+    name: "Set master-volume of the host system to 100% on startup (Sendspin's volume is controlled separately)"
   static_delay_ms:
     name: "Extra playback delay in milliseconds applied after clock sync"
   name:

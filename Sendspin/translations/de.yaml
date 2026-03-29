@@ -1,4 +1,6 @@
 configuration:
+  boost_volume:
+    name: "Setze Master-Lautstärke auf 100% beim Starten (Sendspins-Lautstärke wird separat gesteuert)"
   static_delay_ms:
     name: "Zusätzliche Wiedergabeverzoegerung in Millisekunden nach der Synkronisierung"
   name:
