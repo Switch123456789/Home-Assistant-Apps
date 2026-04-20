@@ -14,7 +14,8 @@ RUN apk update && apk upgrade --no-cache && apk add --no-cache \
 RUN wget "https://github.com/Sendspin/sendspin-cli/archive/refs/heads/main.zip" -P "/tmp" && \
     unzip "/tmp/main.zip" -d "/tmp" && \
     cd "/tmp/sendspin-cli-main" && \
-    pip3 install --break-system-packages --no-cache .
+    pip3 install --break-system-packages --no-cache . && \
+    rm -R -f "/tmp/"*
 
 # PREPARE CONFIG
 RUN mkdir -p /root/.config/sendspin
