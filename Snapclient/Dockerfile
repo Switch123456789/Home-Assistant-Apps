@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-python
+ARG BUILD_FROM=ghcr.io/home-assistant/base-python
 FROM ${BUILD_FROM}
 RUN echo "Version: 0.13"
 

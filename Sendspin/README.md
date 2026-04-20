@@ -1,4 +1,4 @@
-# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Sendspin](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Sendspin)
+# [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Sendspin](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Sendspin)
 ![](logo.png)
 
 ## Features
@@ -14,6 +14,7 @@
 - Works out of the box in most cases.
 - If you don't get audio output, check the audio output settings in the config-tab.
 ## More info
+- This app installs `sendspin-cli` from the main-branch of the sendspin repository.
 - On startup the log will show the current configuration-file.
 - This app comes with a minimal config-file for basic settings:
 ```

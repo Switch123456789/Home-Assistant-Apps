@@ -1,5 +1,5 @@
 ### **THIS APP IS DEPRECATED**
-# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Snapclient](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Snapclient)
+# [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Snapclient](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Snapclient)
 ![](logo.png)
 
 ## Features

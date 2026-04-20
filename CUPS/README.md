@@ -1,4 +1,4 @@
-# [Switch123456789](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [CUPS](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/CUPS)
+# [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [CUPS](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/CUPS)
 ![](logo.png)
 
 ## Features
