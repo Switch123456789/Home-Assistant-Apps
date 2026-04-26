@@ -13,6 +13,7 @@
 ## Usage
 - Works out of the box in most cases.
 - If you don't get audio output, check the audio output settings in the config-tab.
+
 ## More info
 - This app installs `sendspin-cli` from the main-branch.
 - On startup the log will show the current configuration-file.

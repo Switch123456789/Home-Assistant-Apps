@@ -1,13 +1,11 @@
 configuration:
-  boost_volume:
+  bool_boost_volume:
     name: "Setze Master-Lautstärke auf 100% beim Starten (Sendspins-Lautstärke wird separat gesteuert)"
-  static_delay_ms:
-    name: "Zusätzliche Wiedergabeverzoegerung in Millisekunden nach der Synkronisierung"
-  name:
+  str_name:
     name: "Name für diesen Client"
-  id:
+  str_id:
     name: "Einzigartige ID für diesen Client"
-  url:
+  str_url:
     name: "WebSocket URL des Sendspin-Servers"
-  log_level:
+  str_log_level:
     name: "Logging level verwenden"

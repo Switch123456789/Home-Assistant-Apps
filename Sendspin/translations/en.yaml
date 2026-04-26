@@ -1,13 +1,11 @@
 configuration:
-  boost_volume:
+  bool_boost_volume:
     name: "Set master-volume of the host system to 100% on startup (Sendspin's volume is controlled separately)"
-  static_delay_ms:
-    name: "Extra playback delay in milliseconds applied after clock sync"
-  name:
-    name: "Friendly name for this client"
-  id:
+  str_name:
+    name: "Friendly name of this client"
+  str_id:
     name: "Unique identifier for this client"
-  url:
+  str_url:
     name: "WebSocket URL of the Sendspin server"
-  log_level:
+  str_log_level:
     name: "Logging level to use"
