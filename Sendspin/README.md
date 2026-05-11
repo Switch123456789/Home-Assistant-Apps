@@ -11,6 +11,7 @@
 3. Click install
 
 ## Usage
+- Make sure to use the latest Music Assistant Beta (this requirement might change in the future, whenever sendspin becomes stable).
 - Works out of the box in most cases.
 - If you don't get audio output, check the audio output settings in the config-tab.
 
