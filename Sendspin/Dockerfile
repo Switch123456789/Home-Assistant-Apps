@@ -1,6 +1,6 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/base-python
 FROM ${BUILD_FROM}
-RUN echo "Version: 0.21"
+RUN echo "Version: 0.22"
 
 # INSTALL PACKAGES
 RUN for r in http://dl-cdn.alpinelinux.org/alpine/edge/main http://dl-cdn.alpinelinux.org/alpine/edge/community; do grep -qxF "$r" /etc/apk/repositories || echo "$r" >> /etc/apk/repositories; done

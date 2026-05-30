@@ -1,7 +1,7 @@
 slug: "sendspin"
 name: "Sendspin"
 description: "Sendspin client for local playback"
-version: "0.21"
+version: "0.22"
 init: false
 audio: true
 realtime: true
