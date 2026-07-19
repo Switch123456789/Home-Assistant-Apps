@@ -1,0 +1,16 @@
+slug: "ledfx"
+name: "LedFx"
+description: "LedFx allows you to control your LED lights with music."
+version: "0.4"
+init: false
+audio: true
+realtime: true
+host_network: true
+
+arch:
+  - aarch64
+  - amd64
+map:
+  - app_config:rw
+
+startup: services
