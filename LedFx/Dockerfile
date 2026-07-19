@@ -1,5 +1,5 @@
 FROM ghcr.io/home-assistant/base-python:3.13-alpine3.24
-RUN echo "Version: 0.4"
+RUN echo "Version: 0.5"
 
 #INSTALL PACKAGES (APK)
 RUN apk update && apk upgrade --no-cache && apk add --no-cache \
@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir pyudev ledfx
 
 #START SCRIPT
 RUN rm -R -f "/tmp/"*
-#COPY run.sh /
-#RUN chmod a+x /run.sh
-#CMD [ "/run.sh" ]
-CMD [ "/config/run.sh" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
+#CMD [ "/config/run.sh" ]

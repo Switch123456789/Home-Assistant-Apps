@@ -1,7 +1,7 @@
 slug: "ledfx"
 name: "LedFx"
-description: "LedFx allows you to control your LED lights with music."
-version: "0.4"
+description: "Animate LED's with music from Music Assistant/Sendspin & other sources."
+version: "0.5"
 init: false
 audio: true
 realtime: true
