@@ -1,4 +1,4 @@
-## Home Assistant Apps
+## [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps)
 - **[Sendspin](Sendspin)** Play back music through audio interfaces, that are connected to Home Assistants host-system.
 - **[LedFx](LedFx)** Animate LED's with music from Music Assistant/Sendspin & other sources.
 - **[CUPS](CUPS)** Share printers, that are connected to Home Assistants host-system.
