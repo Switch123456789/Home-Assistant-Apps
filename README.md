@@ -4,8 +4,8 @@
 - **[CUPS](CUPS)** Share printers, that are connected to Home Assistants host-system.
 
 ## Depricated Apps
-- [Mopidy]()
-- [Snapclient]()
+- [Mopidy](Mopidy)
+- [Snapclient](Snapclient)
 
 ## Architecture
 ![aarch64: yes](https://img.shields.io/badge/aarch64-yes-green.svg) ![amd64: yes](https://img.shields.io/badge/amd64-yes-green.svg)
