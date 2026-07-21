@@ -12,9 +12,10 @@
 3. Click install!
 
 ## Usage
-1. **Webinterface** can be accessed Through Home Assistant (Ingress) or at `https://HOSTNAME:8888`.
-2. **Config-files** can be accessed through the `app_configs`-folder.
+1. Right after launching the LedFx-app, a playback device should show up in Music Assistant (if installed).
+2. Access the webinterface through Home Assistant (Ingress) or at `https://HOSTNAME:8888`.
+3. There you can manage the sendspin-servers on the settings-page. Check `Expert Mode` & `Beta Mode` on top, click `Features` & click the `MANAGE`-button.
 
 ## More info
+- **Config-files** can be accessed through the `app_configs`-folder.
 - **If no `config.json`-file is present, the app will create a default configuration, that sets ledfx to receive sendspin-audio from the localhost (for Music Assistant App)
-- **This can be managed** on the settings-page of ledfx, by checking `Expert Mode` & `Beta Mode` on top, clicking `Features` & clicking the `MANAGE`-button.
