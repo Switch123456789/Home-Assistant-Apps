@@ -1,0 +1,42 @@
+#!/command/with-contenv bashio
+    function check_config_str {
+        declare -g "cfg_$1"="$(bashio::config "$1")"
+    }
+
+
+# APP-CONFIG
+    bashio::log.info "Preparing LedFx ..."
+    check_config_str log_level
+    if [ "${cfg_log_level?}" = "INFO" ]; then
+        declare -g cmd_log_level="-v"
+    elif [ "${cfg_log_level?}" = "DEBUG" ]; then
+        declare -g cmd_log_level="-vv"
+    else
+        declare -g cmd_log_level=""
+    fi
+
+
+# CONFIG-FILE
+    rm -rf /root/.ledfx
+    ln -s "/config/" "/root/.ledfx"
+    if [ ! -f "/config/config.json" ]; then { printf '%s\n' \
+        "{" \
+        "  \"audio\": {" \
+        "    \"audio_device\": 2" \
+        "  }," \
+        "  \"configuration_version\": \"2.3.6\"," \
+        "  \"sendspin_servers\": {" \
+        "    \"music-assistant\": {" \
+        "      \"client_name\": \"LedFx\"," \
+        "      \"server_url\": \"ws://[::1]:8927/sendspin\"" \
+        "    }" \
+        "  }" \
+        "}"
+    } > "/config/config.json" ; fi
+
+
+# START
+    bashio::log.info "Starting LedFx ..."
+    ledfx ${cmd_log_level} --offline --no-tray --host :: --port 8888 &
+    nginx -g "daemon off;"
+    bashio::log.info "Stopping LedFx ..."
