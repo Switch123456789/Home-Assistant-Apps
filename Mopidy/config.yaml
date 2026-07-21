@@ -2,6 +2,7 @@ slug: "mopidy"
 name: "Mopidy"
 description: "Mopidy + extensions + Snapcast + Icecast"
 version: "0.9"
+stage: "deprecated"
 init: false
 audio: true
 realtime: true

@@ -2,6 +2,7 @@ slug: "snapclient"
 name: "Snapclient"
 description: "Snapcast client for local playback"
 version: "0.13"
+stage: "deprecated"
 init: false
 audio: true
 realtime: true
