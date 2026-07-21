@@ -1,7 +1,7 @@
 ## Home Assistant Apps
-- **[Sendspin]()** Play back music through audio interfaces, that are connected to Home Assistants host-system.
-- **[LedFx]()** Animate LED's with music from Music Assistant/Sendspin & other sources.
-- **[CUPS]()** Share printers, that are connected to Home Assistants host-system.
+- **[Sendspin](Sendspin)** Play back music through audio interfaces, that are connected to Home Assistants host-system.
+- **[LedFx](LedFx)** Animate LED's with music from Music Assistant/Sendspin & other sources.
+- **[CUPS](CUPS)** Share printers, that are connected to Home Assistants host-system.
 
 ## Depricated Apps
 - [Mopidy]()
