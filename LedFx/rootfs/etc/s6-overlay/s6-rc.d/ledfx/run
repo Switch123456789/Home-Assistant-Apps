@@ -17,8 +17,7 @@
 
 
 # CONFIG-FILE
-    rm -rf /root/.ledfx
-    ln -s "/config/" "/root/.ledfx"
+    if [ ! -d "/root/.ledfx" ]; then ln -s "/config/" "/root/.ledfx"; fi
     if [ ! -f "/config/config.json" ]; then { printf '%s\n' \
         "{" \
         "  \"audio\": {" \
@@ -37,6 +36,4 @@
 
 # START
     bashio::log.info "Starting LedFx ..."
-    ledfx ${cmd_log_level} --offline --no-tray --host :: --port 8888 &
-    nginx -g "daemon off;"
-    bashio::log.info "Stopping LedFx ..."
+    ledfx ${cmd_log_level} --offline --no-tray --host :: --port 8888

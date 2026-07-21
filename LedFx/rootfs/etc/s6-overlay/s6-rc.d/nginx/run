@@ -1,0 +1,4 @@
+#!/command/with-contenv bashio
+sleep 2
+bashio::log.info "Starting Nginx ..."
+nginx -g "daemon off;"

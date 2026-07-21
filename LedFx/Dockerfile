@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir "aiosendspin==6.1.1" "git+https://github.com/LedF
 
 # START SCRIPT
 COPY rootfs /
-RUN chmod a+x "/etc/s6-overlay/s6-rc.d/app/run"
+RUN chmod a+x "/etc/s6-overlay/s6-rc.d/ledfx/run" "/etc/s6-overlay/s6-rc.d/nginx/run"
