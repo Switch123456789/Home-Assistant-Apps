@@ -1,7 +1,7 @@
 slug: "ledfx"
 name: "LedFx"
 description: "Animate LED's with music from Music Assistant/Sendspin & other sources"
-version: "0.17"
+version: "0.19"
 stage: "experimental"
 startup: services
 init: false
@@ -11,7 +11,6 @@ audio: true
 realtime: true
 
 ingress: true
-ingress_port: 8887
 ingress_stream: true
 panel_icon: "mdi:led-variant-on"
 
@@ -23,4 +22,4 @@ map:
   - app_config:rw
 
 schema:
-  log_level: list(WARNING|INFO|DEBUG)?
+  log_level: list(Warning|Info|Debug)?

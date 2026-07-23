@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+    if [ ! -f "/config/config.json" ]; then
+        cp -p -r "/root/.ledfx.default/"* "/config"
+        bashio::log.warning "NO LEDFX CONFIGURATION-FILES FOUND, RESTORED DEFAULTS!"
+    fi
+    ln -s "/config/" "/root/.ledfx";
+    bashio::log.info "FINISHED INITIALIZATION!"

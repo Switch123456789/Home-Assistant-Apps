@@ -1,0 +1,12 @@
+{
+  "audio": {
+    "audio_device": 2
+  },
+  "configuration_version": "2.3.6",
+  "sendspin_servers": {
+    "music-assistant": {
+      "client_name": "LedFx",
+      "server_url": "ws://[::1]:8927/sendspin"
+    }
+  }
+}

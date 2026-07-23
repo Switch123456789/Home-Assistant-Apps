@@ -1,4 +1,12 @@
 #!/command/with-contenv bashio
-sleep 2
-bashio::log.info "Starting Nginx ..."
-nginx -g "daemon off;"
+    # nginx -g "daemon off;" > /dev/null 2>&1 &
+    nginx -g "daemon off;" & 
+
+# OVERLAY
+    pid=$!
+    while ! nc -z 127.0.0.1 8099; do
+        sleep 0.1
+    done
+    bashio::log.info "STARTED NGINX!"
+    printf '\n' >&3
+    wait "$pid"
