@@ -1,5 +1,5 @@
 configuration:
-  root_password:
+  cups_password:
     name: "Root-password"
   avahi_log_level:
     name: "Avahi's logging-level"
