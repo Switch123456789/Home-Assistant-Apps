@@ -4,6 +4,6 @@
 # OVERLAY
     pid=$!
     while [ ! -S /run/dbus/system_bus_socket ]; do sleep 0.1; done
-    bashio::log.info "STARTED DBUS ..."
+    bashio::log.info "STARTED DBUS!"
     printf '\n' >&3
     wait "$pid"

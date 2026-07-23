@@ -10,4 +10,4 @@
     fi
     ln -s "/config/cups" "/etc/cups";
     echo "root:$(bashio::config 'cups_password')" | chpasswd
-    bashio::log.info "FINISHED INITIALIZATION ..."
+    bashio::log.info "FINISHED INITIALIZING!"
