@@ -28,4 +28,5 @@ RUN chmod a+x \
     "/etc/s6-overlay/s6-rc.d/avahi/run" \    
     "/etc/s6-overlay/s6-rc.d/cups/run"  \
     "/etc/s6-overlay/s6-rc.d/dbus/run"  \
+    "/etc/s6-overlay/s6-rc.d/init/run"  \    
     "/etc/s6-overlay/s6-rc.d/nginx/run"
