@@ -1,5 +1,5 @@
 configuration:
   cups_password:    
-    name: "Root-Passwort"
+    name: "Root-Passwort (Benötigt für login mit @SYSTEM-Gruppe)"
   avahi_log_level:    
     name: "Avahi's logging-level"
