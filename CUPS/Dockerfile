@@ -23,7 +23,7 @@ RUN mkdir -p /var/run/dbus && \
     mv /etc/cups  /etc/cups.default
 
 # PERMISSIONS
-RUN addgroup "root" lpadmin && \
+RUN addgroup "root" lpadmin
 RUN chmod a+x \
     "/etc/s6-overlay/s6-rc.d/avahi/run" \    
     "/etc/s6-overlay/s6-rc.d/cups/run"  \
