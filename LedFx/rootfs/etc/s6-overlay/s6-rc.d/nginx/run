@@ -4,9 +4,7 @@
 
 # OVERLAY
     pid=$!
-    while ! nc -z 127.0.0.1 8099; do
-        sleep 0.1
-    done
+    while ! nc -z 127.0.0.1 8887; do sleep 0.1; done
     bashio::log.info "STARTED NGINX!"
     printf '\n' >&3
     wait "$pid"
