@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bashio
+    if [ ! -d "/config/avahi" ]; then
+        bashio::log.warning "No avahi configuration-files found, using defaults ..."
+        cp -p -r "/etc/avahi.default" "/config/avahi"
+    fi
+    ln -s "/config/avahi" "/etc/avahi";
+    if [ ! -d "/config/cups" ]; then
+        bashio::log.warning "No CUPS configuration-files found, using defaults ..."
+        cp -p -r "/etc/cups.default" "/config/cups"
+    fi
+    ln -s "/config/cups" "/etc/cups";
+    echo "root:$(bashio::config 'cups_password')" | chpasswd
+    bashio::log.info "FINISHED INITIALIZATION ..."

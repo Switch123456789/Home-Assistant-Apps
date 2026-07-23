@@ -1,41 +1,32 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
-RUN echo "Version: 0.13"
+FROM ghcr.io/home-assistant/base
 
-#UPDATE AND INSTALL PACKAGES
-#RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+# INSTALL DEPENDENCIES
 RUN apk update && apk upgrade --no-cache && apk add --no-cache \
-    dbus \
     avahi \
     colord \
-    cups
+    cups \
+    cups-filters \
+    dbus \
+    gutenprint \
+    gutenprint-cups \
+    nginx
 
-#PREPARE PACKAGES
+# PREPARE CONFIGURATION
+COPY rootfs /
+RUN sed -i "s/Listen localhost:631/ServerAlias *\nListen *:631/" "/etc/cups/cupsd.conf" && \
+    sed -i "s/IdleExitTimeout 60/#IdleExitTimeout 60/" "/etc/cups/cupsd.conf" && \
+    sed -i "s/DefaultAuthType Basic/DefaultAuthType Basic\nDefaultEncryption Never/" "/etc/cups/cupsd.conf" && \
+    sed -i "s/  Order allow,deny/  Allow all\n  Order allow,deny/" "/etc/cups/cupsd.conf" && \
+    sed -i "s/    Order deny,allow/    Allow all\n    Order deny,allow /" "/etc/cups/cupsd.conf"
+
 RUN mkdir -p /var/run/dbus && \
-    { \
-        echo "Listen *:631"; \
-        echo "WebInterface Yes"; \
-        echo "<Location />"; \
-        echo "Order allow,deny"; \
-        echo "Allow @LOCAL"; \
-        echo "</Location>"; \
-        echo "<Location /admin>"; \
-        echo "Order allow,deny"; \
-        echo "Allow @LOCAL"; \
-        echo "</Location>"; \
-        echo "LogLevel error"; \
-    } > "/etc/cups/cupsd.conf" && \
-    rm -r /etc/avahi/services && \
-    mv    /etc/avahi /etc/avahi.default && \
-    mv    /etc/cups /etc/cups.default
+    mv /etc/avahi /etc/avahi.default && \
+    mv /etc/cups  /etc/cups.default
 
-#START SCRIPT
-COPY run.sh /
-RUN chmod a+x /run.sh
-CMD [ "/run.sh" ]
-#CMD [ "/config/run.sh" ]
-
-
-#sed -i "s/use-ipv6=yes/use-ipv6=no/"          "/etc/avahi/avahi-daemon.conf" && \
-#sed -i "s/Listen localhost:631/Listen *:631/" "/etc/cups/cupsd.conf" && \
-#sed -i "s/Browsing Yes/Browsing No/"          "/etc/cups/cupsd.conf"
+# PREPARE SCRIPTS
+RUN addgroup "root" lpadmin
+RUN chmod a+x \
+    "/etc/s6-overlay/s6-rc.d/avahi/run" \    
+    "/etc/s6-overlay/s6-rc.d/cups/run"  \
+    "/etc/s6-overlay/s6-rc.d/dbus/run"  \
+    "/etc/s6-overlay/s6-rc.d/nginx/run"

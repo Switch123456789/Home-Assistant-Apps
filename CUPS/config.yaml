@@ -1,23 +1,24 @@
 slug: "cups"
 name: "CUPS"
 description: "Manage & share printers"
-version: "0.13"
+version: "0.30"
+startup: services
 init: false
 host_network: true
 usb: true
 
+ingress: true
+ingress_port: 630
+ingress_stream: true
+panel_icon: "mdi:printer"
+
 arch:
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 
 map:
-  - addon_config:rw
+  - app_config:rw
 
-ports:
-  631/tcp: 631
-  631/udp: 631
-
-startup: services
+schema:
+  cups_password: password?
+  avahi_log_level: list(None|Info|Debug)?

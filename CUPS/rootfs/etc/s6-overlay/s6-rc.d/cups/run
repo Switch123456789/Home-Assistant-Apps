@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bashio
+    cupsd -f &
+
+# OVERLAY
+    pid=$!
+    while [ ! -S /run/cups/cups.sock ]; do sleep 0.1; done
+    bashio::log.info "STARTED CUPS ..."
+    printf '\n' >&3
+    wait "$pid"

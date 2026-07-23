@@ -2,21 +2,20 @@
 ![](logo.png)
 
 ## Features
-- Allows to share printers on the local network
-- Very useful if you want to make a USB-printer accessible from Home Assistant
+- Allows printer-sharing on local networks.
+- Very useful if you want to make a USB-printers accessible.
 - Detects printers connected to Home Assistants host system.
-- Announces printers on the local network over mDNS (zeroconf/avahi)
+- Announces printers on the local network over mDNS (zeroconf/avahi).
 
 ## Installation
 1. Click: [![SHOW APP ON MY HOME ASSISTANT](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=e34e2f70_cups&repository_url=https%3A%2F%2Fgithub.com%2FSwitch123456789%2FHome-Assistant-Apps)
-2. Click OK on the pop-up to add my repo to Home Assistant
-3. Click install
+2. Click OK on the pop-up to add my repo to Home Assistant!
+3. Click install!
 
 ## Usage
 1. Access the Webinterface by navigating to `https://HOSTNAME:631`.
-2. Config-files Can be accessed through `app_configs`/`addon_configs`-folder
+2. Config-files Can be accessed through `app_configs`-folder.
 
 ## More info
-- Can announce but not discover printers using mDNS
-- Only stock and brother printers are preinstalled (Create an issue to request another package)
-- No Ingress (yet?)
+- If on startup the config-folders (cups or avahi) are missing, the default configuration-files of this app will be deployed.
+- The default-configuration is close to CUPS' stock configuration, only slightly tweaked to make the webui accessible.

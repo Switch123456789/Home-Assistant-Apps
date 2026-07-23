@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+    if [ "$(bashio::config 'avahi_log_level')" = "Debug" ]; then
+        avahi-daemon --no-chroot --debug &
+    elif [ "$(bashio::config 'avahi_log_level')" = "Info" ]; then
+        avahi-daemon --no-chroot &
+    else
+        avahi-daemon --no-chroot 2>/dev/null &
+    fi
+
+# OVERLAY
+    pid=$!
+    while [ ! -S /run/avahi-daemon/socket ]; do sleep 0.1; done
+    bashio::log.info "STARTED AVAHI-DAEMON (Log-level: $(bashio::config 'avahi_log_level'))..."
+    printf '\n' >&3
+    wait "$pid"
