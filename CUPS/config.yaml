@@ -1,7 +1,7 @@
 slug: "cups"
 name: "CUPS"
 description: "Manage & share printers"
-version: "0.41"
+version: "0.42"
 startup: services
 init: false
 host_network: true
