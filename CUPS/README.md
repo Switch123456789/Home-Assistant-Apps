@@ -19,3 +19,4 @@
 ## More info
 - If on startup the config-folders (cups or avahi) are missing, the default configuration-files of this app will be deployed.
 - The default-configuration is close to CUPS' stock configuration, only slightly tweaked to make the webui accessible.
+- Ingress is broken at the moment & I might look into that at some point.
