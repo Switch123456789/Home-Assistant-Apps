@@ -1,7 +1,7 @@
 slug: "sendspin"
 name: "Sendspin"
 description: "Play back music through audio interfaces, that are connected to Home Assistants host-system"
-version: "0.45"
+version: "0.50"
 stage: "experimental"
 startup: services
 init: false
@@ -18,8 +18,8 @@ map:
   - addon_config:rw
 
 schema:
-  bool_boost_volume: bool?
-  str_name: str?
-  str_id: str?
-  str_url: str?
-  str_log_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?
+  name: str?
+  id: str?
+  url: str?
+  volume_controls: list(Hardware|Software|Boosted)?
+  log_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?

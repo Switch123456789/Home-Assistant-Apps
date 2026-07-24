@@ -1,11 +1,11 @@
 configuration:
-  bool_boost_volume:
-    name: "Set master-volume of the host system to 100% on startup (Sendspin's volume is controlled separately)"
-  str_name:
+  volume_controls:
+    name: "Volume controls (Hardware: control volume of the host system | Software: Control volume of sendspin | Boosted: Control volume of sendspin with host system volume boosted to 100%)"
+  name:
     name: "Friendly name of this client"
-  str_id:
+  id:
     name: "Unique identifier for this client"
-  str_url:
+  url:
     name: "WebSocket URL of the Sendspin server"
-  str_log_level:
+  log_level:
     name: "Logging level to use"

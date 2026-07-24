@@ -1,11 +1,11 @@
 configuration:
-  bool_boost_volume:
-    name: "Setze Master-Lautstärke auf 100% beim Starten (Sendspins-Lautstärke wird separat gesteuert)"
-  str_name:
+  volume_controls:
+    name: "Lautstärke-Steuerung (Hardware: Lautstärke des Hostsystems steuern | Software: Lautstärke von Sendspin steuern | Boosted: Lautstärke von Sendspin steuern, mit Host-System-Lautstärke auf 100% geboostet"
+  name:
     name: "Name für diesen Client"
-  str_id:
+  id:
     name: "Einzigartige ID für diesen Client"
-  str_url:
+  url:
     name: "WebSocket URL des Sendspin-Servers"
-  str_log_level:
+  log_level:
     name: "Logging level verwenden"
