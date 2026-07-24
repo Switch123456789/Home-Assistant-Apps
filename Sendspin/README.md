@@ -1,4 +1,4 @@
-# [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Sendspin](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Sendspin)
+## [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [Sendspin](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/Sendspin)
 ![](logo.png)
 
 ## Features
@@ -11,20 +11,12 @@
 3. Click install
 
 ## Usage
-- Make sure to use the latest Music Assistant Beta (this requirement might change in the future, whenever sendspin becomes stable).
-- Works out of the box in most cases.
-- If you don't get audio output, check the audio output settings in the config-tab.
+1. Make sure to use the latest Music Assistant Beta (this requirement might change in the future, whenever sendspin becomes stable).
+2. Works out of the box if Music Assistant is installed on the same host.
+3. If you don't get audio output, check the audio output settings in the config-tab.
 
 ## More info
 - This app installs `sendspin-cli` from the main-branch.
-- On startup the log will show the current configuration-file.
-- This app comes with a minimal config-file for basic settings:
-```
-{
-  "name": "Home Assistant",
-  "client_id": "home_assistant",
-  "last_server_url": "ws://[::1]:8927/sendspin"
-}
-```
+- It deploys a default configuration, that sets sendspin to receive audio from the localhost (for Music Assistant App).
 - The settings in the configuration-tab will be applied to sendspin via commandline.
 - Sendspin will store those settings in it's configuraton-file, whenever it shuts down BUT ONLY if changes were applied at runtime (including volume-changes but excluding commandline-parameters), so keep that in mind.

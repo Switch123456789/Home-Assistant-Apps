@@ -1,0 +1,28 @@
+#!/command/with-contenv bashio
+    function check_config {
+        VALUE="$(bashio::config "$1")"
+        if [ "${VALUE}" != null ]; then
+            declare -g SENDSPIN_CMD+=" ${2} \"${VALUE}\""
+        fi
+    }
+    declare -g SENDSPIN_CMD="sendspin daemon --disable-mpris --manufacturer \"Music Assistant\" --product-name \"Home Assistant\""
+    if [ "$(bashio::config 'volume_controls')" = "Software" ] || [ "$(bashio::config 'volume_controls')" = "Boosted" ]; then
+        declare -g SENDSPIN_CMD+=" --hardware-volume false"
+    fi
+    check_config str_name            "--name"
+    check_config str_id              "--id"
+    check_config str_url             "--url"
+    check_config str_log_level       "--log-level"
+    eval "exec ${SENDSPIN_CMD}" &
+
+# OVERLAY
+    pid=$!
+    sleep 2
+    bashio::log.info "STARTED SENDSPIN!"
+    printf '\n' >&3
+    wait "$pid"
+
+
+
+
+    

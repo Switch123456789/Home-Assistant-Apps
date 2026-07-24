@@ -1,0 +1,5 @@
+{
+    "name": "Home Assistant",
+    "client_id": "home_assistant",
+    "last_server_url": "ws://[::1]:8927/sendspin"
+}
