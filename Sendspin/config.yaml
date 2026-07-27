@@ -1,7 +1,7 @@
 slug: "sendspin"
 name: "Sendspin"
 description: "Play back music through audio interfaces, that are connected to Home Assistants host-system"
-version: "0.50"
+version: "0.51"
 stage: "experimental"
 startup: services
 init: false
