@@ -3,6 +3,8 @@
         cp -p -r "/root/.config/sendspin.default/"* "/config"
         bashio::log.notice "NO SENDSPIN CONFIGURATION-FILES FOUND, RESTORED DEFAULTS!"
     fi
-    if [ "$(bashio::config 'volume_controls')" = "Boosted" ]; then amixer -q set Master 100%; bashio::log.notice "VOLUME SET TO 100%!";fi
+    case "$(bashio::config 'volume_controls')" in ("Boosted")
+        amixer -q set Master 100%; bashio::log.notice "VOLUME SET TO 100%!"
+    ;; esac
     ln -s "/config/" "/root/.config/sendspin"
     bashio::log.info "FINISHED INITIALIZATION!"

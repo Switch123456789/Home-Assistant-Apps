@@ -6,13 +6,13 @@
         fi
     }
     declare -g SENDSPIN_CMD="sendspin daemon --disable-mpris --manufacturer \"Music Assistant\" --product-name \"Home Assistant\""
-    if [ "$(bashio::config 'volume_controls')" = "Software" ] || [ "$(bashio::config 'volume_controls')" = "Boosted" ]; then
+    case "$(bashio::config 'volume_controls')" in ("Software"|"Boosted")
         declare -g SENDSPIN_CMD+=" --hardware-volume false"
-    fi
-    check_config str_name            "--name"
-    check_config str_id              "--id"
-    check_config str_url             "--url"
-    check_config str_log_level       "--log-level"
+    ;; esac
+    check_config name            "--name"
+    check_config id              "--id"
+    check_config url             "--url"
+    check_config log_level       "--log-level"
     eval "exec ${SENDSPIN_CMD}" &
 
 # OVERLAY
