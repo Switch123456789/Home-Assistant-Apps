@@ -1,26 +1,38 @@
+# BASICS
 slug: "ledfx"
 name: "LedFx"
 description: "Animate LED's with music from Music Assistant/Sendspin & other sources"
-version: "0.20"
+version: "0.34"
 stage: "experimental"
 startup: services
 init: false
+arch:
+  - aarch64
+  - amd64
 
-host_network: true
-audio: true
-realtime: true
-
+# INGRESS
 ingress: true
 ingress_port: 8887
 ingress_stream: true
 panel_icon: "mdi:led-variant-on"
 
-arch:
-  - aarch64
-  - amd64
+# PERMISSIONS
+host_network: true
+hassio_api: true
+audio: true
+gpio: true
+services:
+  - mqtt:want
+privileged:
+  - SYS_RAWIO
+devices:
+  - "/dev/mem:/dev/mem:rwm"
+  - "/dev/ttyUSB0:/dev/ttyUSB0:rwm"
+  - "/dev/ttyACM0:/dev/ttyACM0:rwm"
+  - "/dev/serial/by-id/:/dev/serial/by-id/:rwm"
 
+# CONFIG
 map:
   - app_config:rw
-
 schema:
   log_level: list(Warning|Info|Debug)?
