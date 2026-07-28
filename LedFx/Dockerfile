@@ -1,6 +1,5 @@
-FROM ghcr.io/home-assistant/base-python:3.13-alpine3.24
-
 # DEPENDENCIES
+FROM ghcr.io/home-assistant/base-python:3.13-alpine3.24
 RUN apk update && apk upgrade --no-cache && apk add --no-cache \
     linux-headers \
     alsa-plugins-pulse \
