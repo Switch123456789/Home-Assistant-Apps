@@ -3,7 +3,7 @@
 
 ## Features
 - Allows printer-sharing on local networks.
-- Very useful if you want to make a USB-printers accessible.
+- Very useful if you want to make USB-printers accessible.
 - Detects printers connected to Home Assistants host system.
 - Announces printers on the local network over mDNS (zeroconf/avahi).
 
