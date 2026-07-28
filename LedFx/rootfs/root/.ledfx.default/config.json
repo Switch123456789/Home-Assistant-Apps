@@ -1,12 +1,39 @@
 {
-  "audio": {
-    "audio_device": 2
-  },
-  "configuration_version": "2.3.6",
-  "sendspin_servers": {
-    "music-assistant": {
-      "client_name": "LedFx",
-      "server_url": "ws://[::1]:8927/sendspin"
-    }
-  }
+    "audio": {
+        "audio_device": 2
+    },
+    "configuration_version": "2.3.6",
+    "sendspin_servers": {
+        "music-assistant": {
+            "client_name": "LedFx",
+            "server_url": "ws://[::1]:8927/sendspin"
+        }
+    },
+    "virtuals": [
+        {
+            "auto_generated": false,
+            "config": {
+                "name": "Dummy"
+            },
+            "id": "dummy",
+            "is_device": "dummy"
+        }
+    ],
+    "integrations": [
+    {
+        "active": true,
+        "config": {
+            "description": "MQTT Integration with auto-discovery",
+            "ip_address": "::1",
+            "name": "Home Assistant",
+            "password": "CHANGE ME",
+            "port": 1883,
+            "topic": "homeassistant",
+            "username": "CHANGE ME"
+        },
+            "data": [],
+            "id": "home-assistant",
+            "type": "mqtt_hass"
+        }
+    ]
 }
