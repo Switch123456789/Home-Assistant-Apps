@@ -12,10 +12,11 @@
 3. Click install!
 
 ## Usage
-1. Right after launching the LedFx-app, a playback device should show up in Music Assistant (if installed).
-2. Access the webinterface through Home Assistant (Ingress) or at `https://HOSTNAME:8888`.
-3. There you can manage the sendspin-servers on the settings-page. Check `Expert Mode` & `Beta Mode` on top, click `Features` & click the `MANAGE`-button.
+1. The app is preconfigured to receive audio from the local Music Assistant and connect to the local MQTT-broker.
+2. Access the webinterface through Home Assistant (Ingress) or at `https://HOSTNAME:8888` to configure the LedFx.
+3. In the settings, check `Expert Mode` & `Beta Mode` (on top) & click `Features`. Now you can enable `Integrations` (will show up in tabs) and/or click `MANAGE`-button to manage sendspin-servers.
 
 ## More info
 - **Config-files** can be accessed through the `app_configs`-folder.
-- **If no `config.json`-file is present, the app will create a default configuration, that sets ledfx to receive sendspin-audio from the localhost (for Music Assistant App)
+- **If no `config.json`-file is present** on startup, the app will restore the default configuration.
+- **A dummy device** is preconfigured to work around a bug in ledfx. It produces errors if no device is present while using MQTT. Remove the dummy device if you don't need MQTT or after adding your own devices.
