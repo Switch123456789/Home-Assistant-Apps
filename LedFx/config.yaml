@@ -14,7 +14,7 @@ arch:
 ingress: true
 ingress_port: 8887
 ingress_stream: true
-panel_icon: "mdi:led-variant-on"
+panel_icon: "mdi:led-on"
 
 # PERMISSIONS
 host_network: true
