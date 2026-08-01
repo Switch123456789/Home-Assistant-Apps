@@ -1,5 +1,4 @@
 #!/usr/bin/with-contenv bashio
-    bashio::log.info "$(bashio::services mqtt 'username') - $(bashio::services mqtt 'password')"
     if [ ! -f "/config/config.json" ]; then
         cp -p -r "/root/.ledfx.default/"* "/config"
         sed -i "s/            \"username\": \"CHANGE ME\"/            \"username\": \"$(bashio::services mqtt 'username')\"/" "/config/config.json"
