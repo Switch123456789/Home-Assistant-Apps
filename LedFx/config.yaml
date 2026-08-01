@@ -2,7 +2,7 @@
 slug: "ledfx"
 name: "LedFx"
 description: "Animate LED's with music from Music Assistant/Sendspin & other sources"
-version: "0.34"
+version: "0.35"
 stage: "experimental"
 startup: services
 init: false
