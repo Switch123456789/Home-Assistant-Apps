@@ -3,8 +3,6 @@ configuration:
     name: "Lautstärke-Steuerung (Hardware: Lautstärke des Hostsystems steuern | Software: Lautstärke von Sendspin steuern | Boosted: Lautstärke von Sendspin steuern, mit Host-System-Lautstärke auf 100% geboostet"
   name:
     name: "Name für diesen Client"
-  id:
-    name: "Einzigartige ID für diesen Client"
   url:
     name: "WebSocket URL des Sendspin-Servers"
   log_level:

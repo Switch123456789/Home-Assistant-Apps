@@ -2,7 +2,7 @@
 ![](logo.png)
 
 ## Features
-- This app allows [Sendspin](https://github.com/Sendspin/sendspin-cli)-playback on audio interfaces, that are connected to Home Assistants host-system.
+- This app allows Sendspin-playback on audio interfaces, that are connected to Home Assistants host-system.
 - Exposes some configuration-options from sendspin to the app-config-page in Home Assistant.
 
 ## Installation
@@ -12,11 +12,10 @@
 
 ## Usage
 1. Make sure to use the latest Music Assistant Beta (this requirement might change in the future, whenever sendspin becomes stable).
-2. Works out of the box if Music Assistant is installed on the same host.
+2. Works out of the box if mDNS-discovery is enabled in Music Assistant.
 3. If you don't get audio output, check the audio output settings in the config-tab.
 
 ## More info
-- This app installs `sendspin-cli` from the main-branch.
-- It deploys a default configuration, that sets sendspin to receive audio from the localhost (for Music Assistant App).
+- This app installs [sendspin-python-cli](https://github.com/Sendspin/sendspin-python-cli) from the main-branch.
 - The settings in the configuration-tab will be applied to sendspin via commandline.
 - Sendspin will store those settings in it's configuraton-file, whenever it shuts down BUT ONLY if changes were applied at runtime (including volume-changes but excluding commandline-parameters), so keep that in mind.

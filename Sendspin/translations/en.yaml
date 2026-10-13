@@ -3,8 +3,6 @@ configuration:
     name: "Volume controls (Hardware: control volume of the host system | Software: Control volume of sendspin | Boosted: Control volume of sendspin with host system volume boosted to 100%)"
   name:
     name: "Friendly name of this client"
-  id:
-    name: "Unique identifier for this client"
   url:
     name: "WebSocket URL of the Sendspin server"
   log_level:

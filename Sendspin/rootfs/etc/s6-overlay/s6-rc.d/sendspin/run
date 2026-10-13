@@ -10,7 +10,6 @@
         declare -g SENDSPIN_CMD+=" --hardware-volume false"
     ;; esac
     check_config name            "--name"
-    check_config id              "--id"
     check_config url             "--url"
     check_config log_level       "--log-level"
     eval "exec ${SENDSPIN_CMD}" &
