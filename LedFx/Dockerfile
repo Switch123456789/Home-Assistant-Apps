@@ -15,6 +15,10 @@ RUN apk update && apk upgrade --no-cache && apk add --no-cache \
 # APP
 RUN pip install --no-cache-dir ledfx 
 
+# SENDSPIN IS BROKEN IN CURRENT RELEASE, APPLYING FIX FROM MAINBRANCH
+RUN wget -qO "$(python -c 'import ledfx,os;print(os.path.dirname(ledfx.__file__))')/sendspin/stream.py" \
+    https://raw.githubusercontent.com/LedFx/LedFx/d0423a6bd6c4044224515b35149a0e91a865cfe1/ledfx/sendspin/stream.py
+
 # FILES
 COPY rootfs /
 RUN chmod a+x \
