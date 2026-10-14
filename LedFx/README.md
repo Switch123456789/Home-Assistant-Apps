@@ -1,10 +1,10 @@
 ## [Switch123456789](https://github.com/Switch123456789) -> [Home Assistant Apps](https://github.com/Switch123456789/Home-Assistant-Apps) -> [LedFx](https://github.com/Switch123456789/Home-Assistant-Apps/tree/main/LedFx)
 ![](logo.png)
-https://github.com/ledfx/ledfx
+
 ## Features
 - Animates LED's connected to the host-system or the network using audio-signals.
 - All [audio sources supported by LedFx](https://docs.ledfx.app/en/latest/settings/directing_audio.html) are supported by this app, including Sendspin/Music Assistant.
-- Almost all [devices supported by LedFx](https://docs.ledfx.app/en/latest/devices/index_devices.html) are supported by this app. There could be some exception due to limited hardware access to the host-system.
+- Almost all [devices supported by LedFx](https://docs.ledfx.app/en/latest/devices/index_devices.html) are supported by this app. There could be some exceptions, due to limited hardware access to the host-system.
 - The webinterface accessible from Home Assistant (ingress).
 - A fresh installation auto-connects to the local sendspin-server, if available.
 - If a MQTT broker-app is installed on the same machine, this app will autoconnect using autocreated authentication via API. This exposes some LedFx features to MQTT/Home Assistant.
