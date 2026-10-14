@@ -1,25 +1,22 @@
 # DEPENDENCIES
-FROM ghcr.io/home-assistant/base-python:3.13-alpine3.24
+FROM ghcr.io/home-assistant/base-python
 RUN apk update && apk upgrade --no-cache && apk add --no-cache \
-    linux-headers \
     alsa-plugins-pulse \
-    pkgconf \
-    git \
-    make \
-    cmake \
-    gcc \
     g++ \
+    gcc \
+    git \
+    linux-headers \
+    make \
     nginx \
     portaudio-dev \
+    python3-dev \
     eudev-dev
 
 # APP
-RUN pip install --no-cache-dir "aiosendspin==6.1.1" "git+https://github.com/LedFx/LedFx.git@main"
+RUN pip install --no-cache-dir ledfx 
 
 # FILES
 COPY rootfs /
-
-# PERMISSIONS
 RUN chmod a+x \
     "/etc/s6-overlay/s6-rc.d/init/run"  \
     "/etc/s6-overlay/s6-rc.d/ledfx/run" \
